@@ -5,6 +5,7 @@ import BookOffice from './pages/BookOffice'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Details from './pages/Details'
 import SuccesBooking from './pages/SuccesBooking'
+import CheckBooking from './pages/CheckBooking'
 
 
 const App = () => {

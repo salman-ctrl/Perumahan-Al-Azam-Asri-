@@ -13,7 +13,6 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Browse />} />
-        <Route path='/office/:slug/book' element={<BookOffice />} />
         <Route path='/city:slug' element={<CityDetails />} />
         <Route path='/office/:slug' element={<Details />} />
         <Route path='/success-booking' element={<SuccesBooking />} />
@@ -22,5 +21,4 @@ const App = () => {
     </BrowserRouter>
   )
 }
-
 export default App

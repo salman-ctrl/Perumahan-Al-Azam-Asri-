@@ -16,7 +16,6 @@ const App = () => {
         <Route path='/office/:slug/book' element={<BookOffice />} />
         <Route path='/city:slug' element={<CityDetails />} />
         <Route path='/office/:slug' element={<Details />} />
-        <Route path='/success-booking' element={<SuccesBooking />} />
         <Route path='/check-booking' element={<CheckBooking />} />
       </Routes>
     </BrowserRouter>

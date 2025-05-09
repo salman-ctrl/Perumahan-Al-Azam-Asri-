@@ -4,7 +4,6 @@ const CityDetails = () => {
     return (
         <div>
             <p>
-                halaman citydetails
             </p>
         </div>
     )

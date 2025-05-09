@@ -3,7 +3,9 @@ import React from 'react'
 const CityDetails = () => {
     return (
         <div>
-            oke juga
+            <p>
+                halaman citydetails
+            </p>
         </div>
     )
 }

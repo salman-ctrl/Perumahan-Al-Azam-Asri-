@@ -22,6 +22,7 @@ const Hero = () => {
                     <a href="#">
                         <div className='bg-blue-500  text-white flex items-center gap-2 hover:text-blue-500 hover:bg-white hover:border-blue-500 hover:border-1 px-5 py-1 transition-all duration-300 rounded-full'>
                             <PlayIcon className='h-12 w-12' />
+                            <span>Watch Story</span>
                         </div>
                     </a>
 

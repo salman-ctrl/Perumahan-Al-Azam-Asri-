@@ -2,7 +2,6 @@ import React from 'react'
 import Crown from '../../assets/images/icons/crown-white.svg'
 import Banner from '../../assets/images/backgrounds/banner.png'
 import { PlayIcon, MagnifyingGlassIcon } from '@heroicons/react/16/solid'
-
 const Hero = () => {
     return (
         <div className='relative h-[80vh] w-screen'>
@@ -25,19 +24,11 @@ const Hero = () => {
                             <span>Watch Story</span>
                         </div>
                     </a>
-
                 </div>
             </div>
-
             <div className='absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 h-full w-full -translate-y-1/2 overflow-hidden'>
-                <img src={Banner} className='w-full h-full object-cover' alt="" />
             </div>
-
-
-
-
         </div>
     )
 }
-
 export default Hero;

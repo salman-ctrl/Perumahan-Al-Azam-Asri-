@@ -353,7 +353,10 @@ const Hero = () => {
                                 />
                             </div>
                             <div className="flex flex-col gap-[5px]">
-
+                                <p className="font-bold text-lg leading-[27px]">Sustain for Business</p>
+                                <p className="text-sm leading-[24px]">
+                                    Lorem available without even higher tax that cost much
+                                </p>
                             </div>
                         </div>
                     </div>

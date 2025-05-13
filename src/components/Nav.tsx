@@ -5,7 +5,7 @@ import { PhoneIcon } from '@heroicons/react/16/solid'
 const Nav = () => {
   return (
     <>
-      <div className='w-full items-center justify-between flex py-7 px-50 mx-auto bg-blue-100'>
+      <div className='w-full items-center justify-between flex py-7 px-50 mx-auto bg-white'>
         <a href="#">
           <img src={logo} alt="" />
         </a>

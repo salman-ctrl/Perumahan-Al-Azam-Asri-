@@ -373,7 +373,7 @@ const Hero = () => {
                                 <img className='w-full object-cover h-full' src="src\assets\images\thumbnails\thumbnails-1.png" alt="" />
                             </div>
                             <h1 className='line-clamp-2'>Masayori Future Space</h1>
-                            <div className='space-y-10'>
+                            <div className='space-y-7'>
                                 <div className='flex justify-between px-5 items-center'>
                                     <p className='leading-[36px]'>Rp 18.560.000</p>
                                     <div className='flex items-center gap-2'>

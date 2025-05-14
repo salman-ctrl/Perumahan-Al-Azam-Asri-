@@ -395,6 +395,7 @@ const Hero = () => {
                                 <hr className="border-[#F6F5FD]" />
                                 <div className='flex items-center justify-between px-5'>
                                     <div className='flex items-center gap-2'>
+                                        <WifiIcon className='h-7 w-7 text-blue-500' />
                                         <p>Fast-Connection</p>
                                     </div>
                                     <div className='flex items-center gap-2'>

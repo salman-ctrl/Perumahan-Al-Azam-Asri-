@@ -1,7 +1,7 @@
 import React from 'react'
 import Crown from '../../assets/images/icons/crown-white.svg'
 import Banner from '../../assets/images/backgrounds/banner.png'
-import { PlayIcon, MagnifyingGlassIcon } from '@heroicons/react/16/solid'
+import { PlayIcon, MagnifyingGlassIcon, MapPinIcon, StarIcon, WifiIcon, UserIcon, ClockIcon } from '@heroicons/react/16/solid'
 import { Swiper, SwiperSlide } from 'swiper/react'
 const Hero = () => {
     return (
@@ -363,8 +363,54 @@ const Hero = () => {
 
                 </div>
             </section>
+            <section className=' '>
+                <div className='flex flex-col items-center mt-32'>
+                    <p className='text-3xl text-center '>Browse Our Fresh Space. <br /> For Your Better Productivity</p>
+                    <div className='mt-20'>
+                        <div className='flex flex-col rounded-[20px] border h-[700px] border-[#E0DEF7] bg-white overflow-hidden '>
+                            <div className='thumbnail-container relative w-[350px] h-[200px]'>
+                                <p className='absolute'>Popular</p>
+                                <img className='w-full object-cover h-full' src="src\assets\images\thumbnails\thumbnails-1.png" alt="" />
+                            </div>
+                            <h1 className='line-clamp-2'>Masayori Future Space</h1>
+                            <div className='space-y-10'>
+                                <div className='flex justify-between px-5 items-center'>
+                                    <p className='leading-[36px]'>Rp 18.560.000</p>
+                                    <div className='flex items-center gap-2'>
+                                        <p>Days 20</p>
+                                        <ClockIcon className='h-7 w-7 text-blue-500' />
+                                    </div>
+                                </div>
+                                <hr className="border-[#F6F5FD]" />
+                                <div className='flex justify-between px-5 items-center'>
+                                    <div className='flex items-center gap-2 '>
+                                        <MapPinIcon className='h-7 w-7 text-blue-500' />
+                                        <p>Jakarta Pusat</p>
+                                    </div>
+                                    <div className='flex items-center gap-2'>
+                                        <p>4.5/5</p>
+                                        <StarIcon className='h-7 w-7 text-amber-300' />
+                                    </div>
+                                </div>
+                                <hr className="border-[#F6F5FD]" />
+                                <div className='flex items-center justify-between px-5'>
+                                    <div className='flex items-center gap-2'>
+                                        <WifiIcon className='h-7 w-7 text-blue-500' />
+                                        <p>Fast-Connection</p>
+                                    </div>
+                                    <div className='flex items-center gap-2'>
+                                        <UserIcon className='h-7 w-7 text-blue-500' />
+                                        <p>Secure 100%</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
             <section>
-                <div className='h-70'>
+                <div className='h-96'>
 
                 </div>
             </section>

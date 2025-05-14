@@ -3,7 +3,7 @@ import Nav from '../components/Nav'
 import Hero from '../components/Browsecomponent/Hero'
 const Browse = () => {
     return (
-        <div>
+        <div className='bg-gray-50'>
             <Nav />
             <Hero />
         </div>

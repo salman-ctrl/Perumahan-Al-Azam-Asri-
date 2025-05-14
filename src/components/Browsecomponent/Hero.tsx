@@ -399,7 +399,6 @@ const Hero = () => {
                                         <p>Fast-Connection</p>
                                     </div>
                                     <div className='flex items-center gap-2'>
-                                        <UserIcon className='h-7 w-7 text-blue-500' />
                                         <p>Secure 100%</p>
                                     </div>
                                 </div>

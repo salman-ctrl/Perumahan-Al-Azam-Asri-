@@ -389,7 +389,6 @@ const Hero = () => {
                                     </div>
                                     <div className='flex items-center gap-2'>
                                         <p>4.5/5</p>
-                                        <StarIcon className='h-7 w-7 text-amber-300' />
                                     </div>
                                 </div>
                                 <hr className="border-[#F6F5FD]" />

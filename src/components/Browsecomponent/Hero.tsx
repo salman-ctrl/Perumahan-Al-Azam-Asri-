@@ -31,7 +31,6 @@ const Hero = () => {
                         </div>
                     </div>
                     <div className='absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 h-full w-full -translate-y-1/2 overflow-hidden'>
-                        <img src={Banner} className='w-full h-full object-cover' alt="" />
                     </div>
                 </div>
             </section>
@@ -548,7 +547,6 @@ const Hero = () => {
                                     <p className='absolute px-4 top-4 font-bold left-5 py-1 bg-blue-500 text-white rounded-full'>Popular</p>
                                     <img className='w-full object-cover h-full' src="src\assets\images\thumbnails\thumbnails-1.png" alt="" />
                                 </div>
-
                                 <div className='px-3'>
                                     <h2 className='line-clamp-2 px-3 font-bold text-[22px] leading-[36px] h-[72px] ' >Masayori Future Space</h2>
                                     <div className='space-y-6'>

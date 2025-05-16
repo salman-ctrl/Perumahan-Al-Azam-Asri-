@@ -31,6 +31,7 @@ const Hero = () => {
                         </div>
                     </div>
                     <div className='absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 h-full w-full -translate-y-1/2 overflow-hidden'>
+                        <img src={Banner} className='w-full h-full object-cover' alt="" />
                     </div>
                 </div>
             </section>

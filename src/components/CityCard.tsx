@@ -16,7 +16,6 @@ const CityCard = ({ city }: CityCardProps) => {
                         alt="Jakarta Pusat"
                     />
                     {/* Gradient overlay yang transparan */}
-                    <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/70 z-10"></div>
                     {/* Konten teks di atas gambar */}
                     <div className="relative flex flex-col justify-end w-full h-full p-5 gap-[2px] z-20">
                         <h3 className="font-bold text-xl leading-[30px] text-white">

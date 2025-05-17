@@ -1,6 +1,10 @@
 import React from 'react'
+import type { City } from '../types/type'
 
-const CityCard = () => {
+const CityCard = ({ city }: CityCardProps) => {
+
+    const baseUrl = "http://127.0.0.1:8000/storage";
+
     return (
         <div>
             <a href="#">
@@ -8,7 +12,7 @@ const CityCard = () => {
                     {/* Gambar di belakang (diposisikan absolute) */}
                     <img
                         className="absolute w-full h-full object-cover z-0"
-                        src="src\assets\images\thumbnails\thumbnails-1.png"
+                        src={`${baseUrl}/${city.photo}`}
                         alt="Jakarta Pusat"
                     />
                     {/* Gradient overlay yang transparan */}
@@ -16,14 +20,18 @@ const CityCard = () => {
                     {/* Konten teks di atas gambar */}
                     <div className="relative flex flex-col justify-end w-full h-full p-5 gap-[2px] z-20">
                         <h3 className="font-bold text-xl leading-[30px] text-white">
-                            Jakarta Pusat
+                            {city.name}
                         </h3>
-                        <p className="text-white">189 Offices</p>
+                        <p className="text-white">{city.officeSpaces_count} Offices</p>
                     </div>
                 </div>
             </a>
         </div>
     )
+}
+
+interface CityCardProps {
+    city: City
 }
 
 export default CityCard

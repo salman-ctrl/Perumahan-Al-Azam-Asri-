@@ -19,11 +19,12 @@ const BrowCityWrapper = () => {
         axios
             .get('http://127.0.0.1:8000/api/cities', {
                 headers: {
-                    "X-API-KEY": "Qsqkj3kjnaso390293n923n"
+                    "X-API-KEY": "Qsqkj3kjnaso390293n923n",
                 },
             })
             .then((response) => {
-                setCities(response.data);
+                console.log("API response:", response.data);
+                setCities(response.data.data);
                 setLoading(false);
             })
             .catch((error) => {
@@ -53,11 +54,9 @@ const BrowCityWrapper = () => {
             >
                 {cities.map((city) => (
                     <SwiperSlide key={city.id} className='!w-fit first-of-type:pl-[calc((100%-1130px-60px)/2)] last-of-type:pr-[calc((100%-1130px-60px)/2)]'>
-                        <CityCard />
+                        <CityCard city={city} />
                     </SwiperSlide>
                 ))}
-
-
             </Swiper>
         </div>
     )

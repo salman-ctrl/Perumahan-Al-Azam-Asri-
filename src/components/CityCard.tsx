@@ -20,7 +20,6 @@ const CityCard = ({ city }: CityCardProps) => {
                     {/* Konten teks di atas gambar */}
                     <div className="relative flex flex-col justify-end w-full h-full p-5 gap-[2px] z-20">
                         <h3 className="font-bold text-xl leading-[30px] text-white">
-                            {city.name}
                         </h3>
                         <p className="text-white">{city.officeSpaces_count} Offices</p>
                     </div>

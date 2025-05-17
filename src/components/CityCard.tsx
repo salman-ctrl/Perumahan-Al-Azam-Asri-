@@ -12,7 +12,6 @@ const CityCard = ({ city }: CityCardProps) => {
                     {/* Gambar di belakang (diposisikan absolute) */}
                     <img
                         className="absolute w-full h-full object-cover z-0"
-                        src={`${baseUrl}/${city.photo}`}
                         alt="Jakarta Pusat"
                     />
                     {/* Gradient overlay yang transparan */}

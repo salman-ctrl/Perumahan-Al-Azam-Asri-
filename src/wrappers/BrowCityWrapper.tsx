@@ -1,9 +1,43 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import CityCard from '../components/CityCard'
+import type { City } from '../types/type'
+import axios from 'axios'
+
+
 
 
 const BrowCityWrapper = () => {
+
+    const [cities, setCities] = useState<City[]>([]);
+
+    const [loading, setLoading] = useState(true);
+
+    const [error, setError] = useState<string | null>(null);
+
+    useEffect(() => {
+        axios
+            .get('http://127.0.0.1:8000/api/cities', {
+                headers: {
+                    "X-API-KEY": "Qsqkj3kjnaso390293n923n"
+                },
+            })
+            .then((response) => {
+                setCities(response.data);
+                setLoading(false);
+            })
+            .catch((error) => {
+                setError(error.message);
+                setLoading(false);
+            });
+    }, []);
+
+    if (loading) {
+        return <p>Loading...</p>;
+    }
+
+
+
     return (
         <div>
             <div className='flex justify-between mx-40 mt-32 text-2xl font-bold mb-10'>
@@ -17,9 +51,12 @@ const BrowCityWrapper = () => {
                 slidesOffsetAfter={30}
                 slidesOffsetBefore={30}
             >
-                <SwiperSlide className='!w-fit first-of-type:pl-[calc((100%-1130px-60px)/2)] last-of-type:pr-[calc((100%-1130px-60px)/2)]'>
-                    <CityCard />
-                </SwiperSlide>
+                {cities.map((city) => (
+                    <SwiperSlide key={city.id} className='!w-fit first-of-type:pl-[calc((100%-1130px-60px)/2)] last-of-type:pr-[calc((100%-1130px-60px)/2)]'>
+                        <CityCard />
+                    </SwiperSlide>
+                ))}
+
 
             </Swiper>
         </div>

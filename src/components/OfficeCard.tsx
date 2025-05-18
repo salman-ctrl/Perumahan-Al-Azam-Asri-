@@ -12,7 +12,7 @@ const OfficeCard = ({ office }: OfficeCardProps) => {
                 <div className='flex shadow-2xl flex-col rounded-[20px] border w-[350px] h-[500px] border-[#E0DEF7] bg-white overflow-hidden '>
                     <div className='thumbnail-container relative w-full h-[200px]'>
                         <p className='absolute px-4 top-4 font-bold left-5 py-1 bg-blue-500 text-white rounded-full '>Popular</p>
-                        <img className='w-full object-cover h-full' src={`${baseUrl} /${office.thumbnail}`} alt="" />
+                        <img className='w-full object-cover h-full' src={`${baseUrl}/${office.thumbnail}`} alt="" />
                     </div>
                     <div className='px-3'>
                         <h2 className='line-clamp-2 px-3 font-bold text-[22px] leading-[36px] h-[72px] ' >Masayori Future Space</h2>

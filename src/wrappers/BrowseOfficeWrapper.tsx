@@ -1,59 +1,53 @@
-import React from 'react'
-import { PlayIcon, MagnifyingGlassIcon, MapPinIcon, StarIcon, WifiIcon, UserIcon, ClockIcon } from '@heroicons/react/16/solid'
+import React, { useEffect, useState } from 'react'
+import type { Office } from '../types/type'
+import axios from 'axios';
+import OfficeCard from '../components/OfficeCard';
 
 
 const BrowseOfficeWrapper = () => {
+
+    const [offices, setOffices] = useState<Office[]>([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState<string | null>(null);
+
+    useEffect(() => {
+        axios
+            .get('http://127.0.0.1:8000/api/offices', {
+                headers: {
+                    "X-API-KEY": "Qsqkj3kjnaso390293n923n",
+                },
+            })
+            .then((response) => {
+                setOffices(response.data.data);
+                setLoading(false);
+            })
+            .catch((error) => {
+                setError(error.message);
+                setLoading(false);
+            })
+    });
+
+    if (loading) {
+        return <p>Loading...</p>
+    }
+
+    if (error) {
+        return <p>Eror dalam pengambilan data : {error}</p>
+    }
+
     return (
         <div>
             <div className='flex flex-col items-center mt-32'>
                 <p className='text-3xl text-center '>Browse Our Fresh Space. <br /> For Your Better Productivity</p>
                 <div className='mt-16 grid grid-cols-3 gap-[30px]'>
-                    <a href="#">
-                        <div className='flex shadow-2xl flex-col rounded-[20px] border w-[350px] h-[500px] border-[#E0DEF7] bg-white overflow-hidden '>
-                            <div className='thumbnail-container relative w-full h-[200px]'>
-                                <p className='absolute px-4 top-4 font-bold left-5 py-1 bg-blue-500 text-white rounded-full '>Popular</p>
-                                <img className='w-full object-cover h-full' src="src\assets\images\thumbnails\thumbnails-1.png" alt="" />
-                            </div>
-                            <div className='px-3'>
-                                <h2 className='line-clamp-2 px-3 font-bold text-[22px] leading-[36px] h-[72px] ' >Masayori Future Space</h2>
-                                <div className='space-y-6'>
-                                    <div className='flex justify-between px-3 items-center'>
-                                        <p className='leading-[36px]'>Rp 18.560.000</p>
-                                        <div className='flex items-center gap-2'>
-                                            <p>Days 20</p>
-                                            <ClockIcon className='h-7 w-7 text-blue-500' />
-                                        </div>
-                                    </div>
-                                    <hr className="border-[#F6F5FD]" />
-                                    <div className='flex justify-between px-3 items-center'>
-                                        <div className='flex items-center gap-2 '>
-                                            <MapPinIcon className='h-7 w-7 text-blue-500' />
-                                            <p>Jakarta Pusat</p>
-                                        </div>
-                                        <div className='flex items-center gap-2'>
-                                            <p>4.3/3</p>
-                                            <StarIcon className='h-7 w-7 text-amber-300' />
-                                        </div>
-                                    </div>
-                                    <hr className="border-[#F6F5FD]" />
-                                    <div className='flex items-center justify-between px-3'>
-                                        <div className='flex items-center gap-2'>
-                                            <WifiIcon className='h-7 w-7 text-blue-500' />
-                                            <p>Fast-Connection</p>
-                                        </div>
-                                        <div className='flex items-center gap-2'>
-                                            <UserIcon className='h-7 w-7 text-blue-500' />
-                                            <p>Secure 100%</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
+                    {offices.map((office) => (
+                        <OfficeCard key={office.id} office={office} />
+                    ))}
                 </div>
             </div>
         </div>
     )
 }
+
 
 export default BrowseOfficeWrapper

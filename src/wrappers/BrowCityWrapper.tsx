@@ -37,6 +37,10 @@ const BrowCityWrapper = () => {
         return <p>Loading...</p>;
     }
 
+    if (error) {
+        return <p>Error Loading data : {error}</p>
+    }
+
 
 
     return (

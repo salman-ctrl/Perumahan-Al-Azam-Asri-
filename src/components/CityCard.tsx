@@ -30,5 +30,8 @@ const CityCard = ({ city }: CityCardProps) => {
     )
 }
 
+interface CityCardProps {
+    city: City
+}
 
 export default CityCard

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import Nav from '../components/Nav'
-import BrowseOfficeWrapper from '../wrappers/BrowseOfficeWrapper'
 import { useParams } from 'react-router-dom'
 import type { City } from '../types/type'
 import axios from 'axios'
+import OfficeCard from '../components/OfficeCard'
 
 const CityDetails = () => {
 
@@ -16,7 +16,7 @@ const CityDetails = () => {
 
     useEffect(() => {
         axios
-            .get(`http://127.0.0.1:8000/api/city${slug}`, {
+            .get(`http://127.0.0.1:8000/api/city/${slug}`, {
                 headers: {
                     "X-API-KEY": "Qsqkj3kjnaso390293n923n",
                 },
@@ -56,16 +56,18 @@ const CityDetails = () => {
                     </p>
                 </div>
             </div>
-            <div className='mt-52 flex  flex-col'>
-                <h1 className='text-4xl '>Browse Offices</h1>
-                <BrowseOfficeWrapper />
-            </div>
+            <section className='flex  flex-col gap-[30px] w-full max-w-[1130px] mx-auto mt-[70px] mb-[120px]'>
 
+                <h1 className='text-4xl '>Browse Offices</h1>
+                <div className='grid grid-cols-3 gap-[30px]' >
+                    {city.officeSpaces.map((office) => (
+                        <OfficeCard key={office.id} office={office} />
+                    ))}
+                </div>
+            </section>
             <div className='h-[70vh]'>
 
             </div>
-
-
         </div>
     )
 }

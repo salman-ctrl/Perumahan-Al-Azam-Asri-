@@ -18,7 +18,7 @@ const OfficeCard = ({ office }: OfficeCardProps) => {
                         <h2 className='line-clamp-2 px-3 font-bold text-[22px] leading-[36px] h-[72px] ' >Masayori Future Space</h2>
                         <div className='space-y-6'>
                             <div className='flex justify-between px-3 items-center'>
-                                <p className='leading-[36px]'>Rp {office.price}</p>
+                                <p className='leading-[36px]'>Rp {office.price.toLocaleString('id-ID')}</p>
                                 <div className='flex items-center gap-2'>
                                     <p>Days {office.duration}</p>
                                     <ClockIcon className='h-7 w-7 text-blue-500' />

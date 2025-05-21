@@ -39,7 +39,9 @@ const CityDetails = () => {
         return <p>Error Loading : {error}</p>
     }
 
-
+    if (!city) {
+        return <p>Category not Found</p>
+    }
 
     return (
         <div className='bg-gray-100 min-h-screen'>

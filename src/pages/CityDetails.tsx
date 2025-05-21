@@ -39,9 +39,7 @@ const CityDetails = () => {
         return <p>Error Loading : {error}</p>
     }
 
-    if (!city) {
-        return <p>Category not Found</p>
-    }
+
 
     return (
         <div className='bg-gray-100 min-h-screen'>
@@ -57,7 +55,6 @@ const CityDetails = () => {
                 </div>
             </div>
             <section className='flex  flex-col gap-[30px] w-full max-w-[1130px] mx-auto mt-[70px] mb-[120px]'>
-
                 <h1 className='text-4xl '>Browse Offices</h1>
                 <div className='grid grid-cols-3 gap-[30px]' >
                     {city.officeSpaces.map((office) => (

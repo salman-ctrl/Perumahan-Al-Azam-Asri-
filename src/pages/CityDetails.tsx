@@ -39,9 +39,6 @@ const CityDetails = () => {
         return <p>Error Loading : {error}</p>
     }
 
-    if (!city) {
-        return <p>Category not Found</p>
-    }
 
     return (
         <div className='bg-gray-100 min-h-screen'>
@@ -49,7 +46,7 @@ const CityDetails = () => {
             <div className='relative h-[70vh]  w-full  '>
                 <img className='h-full w-full ml-[35vw]' src="\src\assets\images\backgrounds\banner.png" alt="" />
                 <div className='flex flex-col rounded-3xl absolute top-1/2 left-72 -translate-x-0.5 -translate-y-1/2 px-10 gap-y-12 justify-between py-12 bg-white w-[35vw] h-80'>
-                    <p className='text-5xl font-bold'>Great Office in <br /> <span className='text-blue-500'>Jakarta Pusat City</span> </p>
+                    <p className='text-5xl font-bold'>Great Office in <br /> <span className='text-blue-500'>{city.name} City</span></p>
                     <p className='text-lg'>
                         Kantor yang tepat dapat memberikan impact pekerjaan <br />
                         menjadi lebih baik dan sehat dalam tumbuhkan karir

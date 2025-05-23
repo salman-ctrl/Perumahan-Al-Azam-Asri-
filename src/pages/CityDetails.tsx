@@ -8,7 +8,6 @@ import OfficeCard from '../components/OfficeCard'
 const CityDetails = () => {
 
     const { slug } = useParams<{ slug: string }>();
-
     const [city, setCity] = useState<City | null>(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
@@ -22,6 +21,10 @@ const CityDetails = () => {
                 },
             })
             .then((response) => {
+                console.log('Full API Response:', response);
+                console.log('Response Data:', response.data);
+                console.log('City Data:', response.data.data);
+
                 setCity(response.data.data);
                 setLoading(false);
             })
@@ -39,6 +42,11 @@ const CityDetails = () => {
         return <p>Error Loading : {error}</p>
     }
 
+    if (!city) {
+        return <p>City not found</p>
+    }
+
+
 
     return (
         <div className='bg-gray-100 min-h-screen'>
@@ -48,8 +56,8 @@ const CityDetails = () => {
                 <div className='flex flex-col rounded-3xl absolute top-1/2 left-72 -translate-x-0.5 -translate-y-1/2 px-10 gap-y-12 justify-between py-12 bg-white w-[35vw] h-80'>
                     <p className='text-5xl font-bold'>Great Office in <br /> <span className='text-blue-500'>{city.name} City</span></p>
                     <p className='text-lg'>
-                        Kantor yang tepat dapat memberikan impact pekerjaan <br />
-                        menjadi lebih baik dan sehat dalam tumbuhkan karir
+                        {/* {city.officeSpaces[0].about} */}
+                        {city.officeSpaces.map(office => office.about).join('. ')}
                     </p>
                 </div>
             </div>
@@ -57,7 +65,8 @@ const CityDetails = () => {
                 <h1 className='text-4xl '>Browse Offices</h1>
                 <div className='grid grid-cols-3 gap-[30px]' >
                     {city.officeSpaces.map((office) => (
-                        <OfficeCard key={office.id} office={office} />
+                        // <OfficeCard key={office.id} office={office} />
+                        <OfficeCard key={office.id} office={office}></OfficeCard>
                     ))}
                 </div>
             </section>

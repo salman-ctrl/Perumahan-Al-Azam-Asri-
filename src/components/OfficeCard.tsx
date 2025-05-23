@@ -28,7 +28,7 @@ const OfficeCard = ({ office }: OfficeCardProps) => {
                             <div className='flex justify-between px-3 items-center'>
                                 <div className='flex items-center gap-2 '>
                                     <MapPinIcon className='h-7 w-7 text-blue-500' />
-                                    <p>{office.city.name}</p>
+                                    {/* <p>{office.city.name}</p> */}
                                 </div>
                                 <div className='flex items-center gap-2'>
                                     <p>4.3/3</p>

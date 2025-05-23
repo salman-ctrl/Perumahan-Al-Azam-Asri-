@@ -61,7 +61,15 @@ const CityDetails = () => {
                     </p>
                 </div>
             </div>
-
+            <section className='flex  flex-col gap-[30px] w-full max-w-[1130px] mx-auto mt-[70px] mb-[120px]'>
+                <h1 className='text-4xl '>Browse Offices</h1>
+                <div className='grid grid-cols-3 gap-[30px]' >
+                    {city.officeSpaces.map((office) => (
+                        // <OfficeCard key={office.id} office={office} />
+                        <OfficeCard key={office.id} office={office}></OfficeCard>
+                    ))}
+                </div>
+            </section>
             <div className='h-[70vh]'>
 
             </div>

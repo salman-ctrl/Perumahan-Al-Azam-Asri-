@@ -70,10 +70,9 @@ const CityDetails = () => {
                     ))}
                 </div>
             </section>
-            <div className='h-[70vh]'>
 
-            </div>
-        </div>
+
+        </div >
     )
 }
 export default CityDetails;

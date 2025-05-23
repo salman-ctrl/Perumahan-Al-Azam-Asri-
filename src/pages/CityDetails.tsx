@@ -66,7 +66,7 @@ const CityDetails = () => {
                 <div className='grid grid-cols-3 gap-[30px]' >
                     {city.officeSpaces.map((office) => (
                         // <OfficeCard key={office.id} office={office} />
-                       
+                        <OfficeCard key={office.id} office={office}></OfficeCard>
                     ))}
                 </div>
             </section>

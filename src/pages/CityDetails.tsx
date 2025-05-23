@@ -57,6 +57,7 @@ const CityDetails = () => {
                     <p className='text-5xl font-bold'>Great Office in <br /> <span className='text-blue-500'>{city.name} City</span></p>
                     <p className='text-lg'>
                         {/* {city.officeSpaces[0].about} */}
+                        {city.officeSpaces.map(office => office.about).join('. ')}
                     </p>
                 </div>
             </div>

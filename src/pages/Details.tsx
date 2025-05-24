@@ -43,6 +43,7 @@ const Details = () => {
         return <p>Error Loading :{error}</p>
     }
 
+    const baseUrl = "http://127.0.0.1:8000/storage";
 
     return (
         <div>

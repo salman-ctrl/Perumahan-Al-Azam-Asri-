@@ -55,7 +55,6 @@ const Details = () => {
                         spaceBetween={10}
                         slidesPerView={1}
                         slidesOffsetAfter={10}
-                        slidesOffsetBefore={10}
                     >
                         {office?.photos.map((photo) => (
                             <SwiperSlide key={photo.id} className='!w-fit' >

@@ -65,6 +65,7 @@ const Details = () => {
                             </SwiperSlide>
                         ))}
 
+                    </Swiper>
                 </div>
             </section>
         </div>

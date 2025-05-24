@@ -58,15 +58,16 @@ const Details = () => {
                         slidesOffsetBefore={10}
                     >
                         {office?.photos.map((photo) => (
-                            <div className='w-[700px] h-[500px] overflow-hidden'>
-                                <img src={`${baseUrl}/${photo.photo}`} alt="" className='w-full h-full object-cover' />
-                            </div>
+                            <SwiperSlide key={photo.id} className='!w-fit' >
+                                <div className='w-[700px] h-[500px] overflow-hidden'>
+                                    <img src={`${baseUrl}/${photo.photo}`} alt="" className='w-full h-full object-cover' />
+                                </div>
                             </SwiperSlide>
                         ))}
-                </Swiper>
+                    </Swiper>
+                </div>
+            </section>
         </div>
-            </section >
-        </div >
     )
 }
 

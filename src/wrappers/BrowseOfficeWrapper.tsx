@@ -28,7 +28,14 @@ const BrowseOfficeWrapper = () => {
     });
 
     if (loading) {
-        return <p>Loading...</p>
+        return <div className="w-full flex justify-center">
+            <div className="loading-wave">
+                <div className="loading-bar" />
+                <div className="loading-bar" />
+                <div className="loading-bar" />
+                <div className="loading-bar" />
+            </div>
+        </div>
     }
 
     if (error) {

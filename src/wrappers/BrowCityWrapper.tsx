@@ -35,7 +35,19 @@ const BrowCityWrapper = () => {
     }, []);
 
     if (loading) {
-        return <p>Loading...</p>;
+        return <>
+            {/* From Uiverse.io by mrpumps31232 */}
+            <div className="w-full flex justify-center">
+                <div className="loading-wave">
+                    <div className="loading-bar" />
+                    <div className="loading-bar" />
+                    <div className="loading-bar" />
+                    <div className="loading-bar" />
+                </div>
+            </div>
+
+        </>
+
     }
 
     if (error) {

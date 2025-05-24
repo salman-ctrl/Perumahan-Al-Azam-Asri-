@@ -51,8 +51,7 @@ const Details = () => {
             <section className='-mb-[50px]'>
                 <div className=''>
                     <Swiper
-                        direction='horizontal'
-                        spaceBetween={10}
+
                         slidesPerView={1}
                         slidesOffsetAfter={10}
                         slidesOffsetBefore={10}

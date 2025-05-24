@@ -64,6 +64,7 @@ const Details = () => {
                                 </div>
                             </SwiperSlide>
                         ))}
+
                     </Swiper>
                 </div>
             </section>
@@ -71,5 +72,7 @@ const Details = () => {
     )
 }
 
-
+interface OfficeCardProps {
+    office: Office
+}
 export default Details

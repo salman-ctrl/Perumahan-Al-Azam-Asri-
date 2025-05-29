@@ -53,7 +53,7 @@ const Details = () => {
                     <Swiper
                         direction='horizontal'
                         spaceBetween={10}
-                        slidesPerView={1}
+                        slidesPerView='auto'
                         slidesOffsetAfter={10}
                         slidesOffsetBefore={10}
                     >
@@ -65,7 +65,11 @@ const Details = () => {
                             </SwiperSlide>
                         ))}
 
+                    </Swiper>
                 </div>
+            </section>
+            <section>
+
             </section>
         </div>
     )

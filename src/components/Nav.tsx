@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import logo from '../assets/images/logos/logo.svg'
 import { PhoneIcon } from '@heroicons/react/16/solid'
 
@@ -10,7 +11,12 @@ const Nav = () => {
           <img src={logo} alt="" />
         </a>
         <ul className='flex items-center gap-12 text-xl'>
-          <li> <a href="#">Browse</a></li>
+          <li>
+            <Link to={`/`}>
+              <a href="#">Browse</a>
+            </Link>
+
+          </li>
           <li><a href="#">Popular</a></li>
           <li><a href="#">Categories</a></li>
           <li><a href="#">Event</a></li>

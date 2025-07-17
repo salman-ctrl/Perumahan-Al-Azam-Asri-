@@ -2,14 +2,10 @@ import React, { useEffect, useState } from 'react'
 import type { Office } from '../types/type'
 import axios from 'axios';
 import OfficeCard from '../components/OfficeCard';
-
-
 const BrowseOfficeWrapper = () => {
-
     const [offices, setOffices] = useState<Office[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
-
     useEffect(() => {
         axios
             .get('http://127.0.0.1:8000/api/offices', {
@@ -26,7 +22,6 @@ const BrowseOfficeWrapper = () => {
                 setLoading(false);
             })
     });
-
     if (loading) {
         return <div className="w-full flex justify-center">
             <div className="loading-wave">
@@ -37,11 +32,9 @@ const BrowseOfficeWrapper = () => {
             </div>
         </div>
     }
-
     if (error) {
         return <p>Eror dalam pengambilan data : {error}</p>
     }
-
     return (
         <div>
             <div className='flex flex-col items-center mt-32'>
@@ -55,6 +48,4 @@ const BrowseOfficeWrapper = () => {
         </div>
     )
 }
-
-
-export default BrowseOfficeWrapper
+export default BrowseOfficeWrapper;

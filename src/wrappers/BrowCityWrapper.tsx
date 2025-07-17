@@ -54,8 +54,6 @@ const BrowCityWrapper = () => {
         return <p>Error Loading data : {error}</p>
     }
 
-
-
     return (
         <div>
             <div className='flex justify-between mx-40 mt-32 text-2xl font-bold mb-10'>

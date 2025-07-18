@@ -1,6 +1,4 @@
 import React from 'react'
-import Crown from '../../assets/images/icons/crown-white.svg'
-import Banner from '../../assets/images/backgrounds/banner.png'
 import { PlayIcon, MagnifyingGlassIcon, MapPinIcon, StarIcon, WifiIcon, UserIcon, ClockIcon } from '@heroicons/react/16/solid'
 import CityCard from '../CityCard'
 import BrowCityWrapper from '../../wrappers/BrowCityWrapper'
@@ -13,7 +11,7 @@ const Hero = () => {
                 <div className='relative h-[80vh] w-full'>
                     <div className='w-[35vw] h-[60vh] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 relative bg-white overflow-hidden ml-5 px-10 py-10 rounded-2xl'>
                         <div className='bg-black text-white flex items-center gap-5 px-5 py-2 rounded-full mr-16'>
-                            <img src={Crown} alt="" className='w-7 h-7 ' />
+                            <img src='/assets/images/icons/crown-white.svg' alt="" className='w-7 h-7 ' />
                             <span className='font-bold'>We've won top productifity 500 fortunes</span>
                         </div>
                         <p className='font-extrabold text-[40px] mt-20'>All Great Offices. <br /> Grow Your Bussiness. </p>
@@ -33,18 +31,18 @@ const Hero = () => {
                         </div>
                     </div>
                     <div className='absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 h-full w-full -translate-y-1/2 overflow-hidden'>
-                        <img src={Banner} className='w-full h-full object-cover' alt="" />
+                        <img src='/assets/images/backgrounds/banner.png' className='w-full h-full object-cover' alt="" />
                     </div>
                 </div>
             </section>
             <section>
                 <div className='bg-blue-500 h-72 flex items-center flex-col gap-y-12 justify-center'>
                     <div className='flex gap-20'>
-                        <img src="/src/assets/images/logos/TESLA.svg" alt="logo" />
-                        <img src="\src\assets\images\logos\Binance logo.svg" alt="clients logo" />
-                        <img src="src\assets\images\logos\Facebook 7.svg" alt="clients logo" />
-                        <img src="src/assets/images/logos/Microsoft 6.svg" alt="clients logo" />
-                        <img src="src/assets/images/logos/Libra 2.svg" alt="clients logo" />
+                        <img src="/assets/images/logos/TESLA.svg" alt="logo" />
+                        <img src="/assets/images/logos/Binance logo.svg" alt="clients logo" />
+                        <img src="/assets/images/logos/Facebook 7.svg" alt="clients logo" />
+                        <img src="/assets/images/logos/Microsoft 6.svg" alt="clients logo" />
+                        <img src="/assets/images/logos/Libra 2.svg" alt="clients logo" />
                     </div>
                     <div className="flex justify-center gap-[50px]">
                         <div className="flex flex-col gap-[2px] text-center">

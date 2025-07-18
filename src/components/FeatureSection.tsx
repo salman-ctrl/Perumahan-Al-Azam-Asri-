@@ -9,7 +9,7 @@ const FeatureSection = () => {
                     <div className="flex items-center gap-4">
                         <div className="flex items-center justify-center shrink-0 w-[70px] h-[70px] rounded-[23px] bg-white overflow-hidden">
                             <img
-                                src="src\assets\images\icons\security-user.svg"
+                                src="/assets/images/icons/security-user.svg"
                                 className="w-[34px] h-[34px]"
                                 alt="icon"
                             />
@@ -24,7 +24,7 @@ const FeatureSection = () => {
                     <div className="flex items-center gap-4">
                         <div className="flex items-center justify-center shrink-0 w-[70px] h-[70px] rounded-[23px] bg-white overflow-hidden">
                             <img
-                                src="src\assets\images\icons\group.svg"
+                                src="/assets/images/icons/group.svg"
                                 className="w-[34px] h-[34px]"
                                 alt="icon"
                             />
@@ -39,7 +39,7 @@ const FeatureSection = () => {
                     <div className="flex items-center gap-4">
                         <div className="flex items-center justify-center shrink-0 w-[70px] h-[70px] rounded-[23px] bg-white overflow-hidden">
                             <img
-                                src="src\assets\images\icons\3dcube.svg"
+                                src="/assets/images/icons/3dcube.svg"
                                 className="w-[34px] h-[34px]"
                                 alt="icon"
                             />
@@ -54,7 +54,7 @@ const FeatureSection = () => {
                     <div className="flex items-center gap-4">
                         <div className="flex items-center justify-center shrink-0 w-[70px] h-[70px] rounded-[23px] bg-white overflow-hidden">
                             <img
-                                src="src\assets\images\icons\cup.svg"
+                                src="/assets/images/icons/cup.svg"
                                 className="w-[34px] h-[34px]"
                                 alt="icon"
                             />
@@ -69,7 +69,7 @@ const FeatureSection = () => {
                     <div className="flex items-center gap-4">
                         <div className="flex items-center justify-center shrink-0 w-[70px] h-[70px] rounded-[23px] bg-white overflow-hidden">
                             <img
-                                src="src\assets\images\icons\coffee.svg"
+                                src="/assets/images/icons/coffee.svg"
                                 className="w-[34px] h-[34px]"
                                 alt="icon"
                             />
@@ -84,7 +84,7 @@ const FeatureSection = () => {
                     <div className="flex items-center gap-4">
                         <div className="flex items-center justify-center shrink-0 w-[70px] h-[70px] rounded-[23px] bg-white overflow-hidden">
                             <img
-                                src="src\assets\images\icons\home-trend-up.svg"
+                                src="/assets/images/icons/home-trend-up.svg"
                                 className="w-[34px] h-[34px]"
                                 alt="icon"
                             />

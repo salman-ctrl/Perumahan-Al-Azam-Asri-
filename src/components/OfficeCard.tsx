@@ -15,7 +15,7 @@ const OfficeCard = ({ office }: OfficeCardProps) => {
                         <img className='w-full object-cover h-full' src={`${baseUrl}/${office.thumbnail}`} alt="" />
                     </div>
                     <div className='px-3'>
-                        <h2 className='line-clamp-2 px-3 font-bold text-[22px] leading-[36px] h-[72px] ' >Masayori Future Space</h2>
+                        <h2 className='line-clamp-2 px-3 font-bold text-[22px] leading-[36px] h-[72px] ' >{office.name}</h2>
                         <div className='space-y-6'>
                             <div className='flex justify-between px-3 items-center'>
                                 <p className='leading-[36px]'>Rp {office.price.toLocaleString('id-ID')}</p>

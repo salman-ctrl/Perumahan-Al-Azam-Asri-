@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Nav from '../components/Nav'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import type { Office } from '../types/type'
 import axios from 'axios'
 
@@ -246,17 +246,19 @@ const Details = () => {
                         </div>
                         <hr className="border-[#F6F5FD]" />
                         <div className="flex flex-col gap-[14px]">
-                            <a
-                                href="booking.html"
-                                className="flex items-center justify-center w-full rounded-full p-[16px_26px] gap-3 bg-[#0D903A] font-bold text-[#F7F7FD]"
-                            >
-                                <img
-                                    src="/assets/images/icons/slider-horizontal-white.svg"
-                                    className="w-6 h-6"
-                                    alt="icon"
-                                />
-                                <span>Book This Office</span>
-                            </a>
+                            <Link to={`/office/${slug}/book`}>
+                                <button className='flex items-center justify-center w-full rounded-full hover:bg-gray-300 hover:text-black hover:border cursor-pointer transition-all duration-700 p-[16px_26px] gap-3 bg-[#0D903A] font-bold text-[#F7F7FD]'>
+                                    <img
+                                        src="/assets/images/icons/slider-horizontal-white.svg"
+                                        className="w-6 h-6"
+                                        alt="icon"
+                                    />
+                                    <span>Book This Office</span>
+                                </button>
+                            </Link>
+
+
+                            {/* </a> */}
                             <button className="flex items-center justify-center w-full rounded-full border border-[#000929] p-[16px_26px] gap-3 bg-white font-semibold">
                                 <img
                                     src="/assets/images/icons/save-add.svg"

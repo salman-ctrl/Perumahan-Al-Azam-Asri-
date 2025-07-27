@@ -172,9 +172,7 @@ const CheckBooking = () => {
                     <div className="flex flex-col gap-4">
                         <h2 className="font-bold">Complete The Details</h2>
                         <div className="flex flex-col gap-2">
-                            <label htmlFor="name" className="font-semibold">
-                                Full Name
-                            </label>
+                            <label htmlFor="name" className="font-semibold">                            </label>
                             <div className="flex items-center rounded-full border border-[#000929] px-5 gap-[10px] transition-all duration-300 focus-within:ring-2 focus-within:ring-[#0D903A]">
                                 <img
                                     src="/assets/images/icons/security-user-black.svg"

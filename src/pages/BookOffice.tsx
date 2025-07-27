@@ -170,6 +170,7 @@ const CheckBooking = () => {
                     </div>
                     <hr className="border-[#F6F5FD]" />
                     <div className="flex flex-col gap-4">
+                        <h2 className="font-bold">Complete The Details</h2>
                         <div className="flex flex-col gap-2">
                             <label htmlFor="name" className="font-semibold">
                                 Full Name

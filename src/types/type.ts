@@ -4,7 +4,7 @@ export interface Office {
     duration: number,
     name: string,
     slug: string,
-    city: City,
+    city?: City,
     thumbnail: string,
     photos: Photo[],
     benefits: Benefit[],
@@ -38,4 +38,9 @@ export interface BookingDetails {
     phone_number: string;
     booking_trx_id: string;
     is_paid: boolean;
+    duration: number;
+    total_amount: number;
+    started_at: string;
+    ended_at: string;
+    office: Office;
 }

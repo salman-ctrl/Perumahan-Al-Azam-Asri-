@@ -1,40 +1,84 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { PhoneIcon } from '@heroicons/react/16/solid'
+import { PhoneIcon, Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid'
 
 const Nav = () => {
+  const [isOpen, setIsOpen] = useState(false)
+
   return (
     <>
-      <div className='w-full items-center justify-between flex py-7 px-50 mx-auto bg-white'>
-        <Link to={`/`} >
-          <a href="#">
-            <img src='/assets/images/logos/logo.svg' alt="" />
+      <nav className="w-full bg-black text-[#d4af37]">
+        <div className="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 py-4">
+
+          {/* Logo */}
+          <Link to={`/`}>
+            <img
+              className="h-12 w-auto object-contain"
+              src="/assets/images/logos/logos.png"
+              alt="Logo"
+            />
+          </Link>
+
+          {/* Menu desktop */}
+          <ul className="hidden md:flex items-center gap-8 text-lg font-medium">
+            <li>
+              <Link to={`/`}>Beranda</Link>
+            </li>
+            <li>Populer</li>
+            <li>Kategori</li>
+            <li>Event</li>
+            <li>Booking Saya</li>
+          </ul>
+
+          {/* Tombol Hubungi */}
+          <a
+            href="https://wa.me/6285267653061"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden sm:flex items-center gap-2 border border-[#d4af37] px-5 py-2 rounded-full hover:bg-[#d4af37] hover:text-black transition-all"
+          >
+            <PhoneIcon className="w-5 h-5" />
+            <span>Hubungi Kami</span>
           </a>
-        </Link>
 
-        <ul className='flex items-center gap-12 text-xl'>
-          <li>
-            <Link to={`/`}>
-              <a href="#">Browse</a>
-            </Link>
+          {/* Hamburger menu (mobile) */}
+          <button
+            className="md:hidden text-[#d4af37]"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {isOpen ? <XMarkIcon className="w-8 h-8" /> : <Bars3Icon className="w-8 h-8" />}
+          </button>
+        </div>
 
-          </li>
-          <li><a href="#">Popular</a></li>
-          <li><a href="#">Categories</a></li>
-          <li><a href="#">Event</a></li>
-          <li><a href="#">My Booking</a></li>
-        </ul>
-        <a href="#" className='flex items-center gap-3 border border-black px-7 py-3 rounded-full '>
-          <PhoneIcon className='w-7 h-7' />
-          <span>Contact Us</span>
-        </a>
-
-      </div>
-      <div>
-
-      </div>
+        {/* Mobile menu dropdown */}
+        {isOpen && (
+          <div className="md:hidden bg-black border-t border-gray-800">
+            <ul className="flex flex-col gap-4 p-4 text-lg">
+              <li>
+                <Link to={`/`} onClick={() => setIsOpen(false)}>Beranda</Link>
+              </li>
+              <li onClick={() => setIsOpen(false)}>Populer</li>
+              <li onClick={() => setIsOpen(false)}>Kategori</li>
+              <li onClick={() => setIsOpen(false)}>Event</li>
+              <li onClick={() => setIsOpen(false)}>Booking Saya</li>
+              <li>
+                <a
+                  href="https://wa.me/6285267653061"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 border border-[#d4af37] px-4 py-2 rounded-full hover:bg-[#d4af37] hover:text-black transition-all"
+                  onClick={() => setIsOpen(false)}
+                >
+                  <PhoneIcon className="w-5 h-5" />
+                  Hubungi Kami
+                </a>
+              </li>
+            </ul>
+          </div>
+        )}
+      </nav>
     </>
   )
 }
 
-export default Nav;
+export default Nav

@@ -57,8 +57,8 @@ const BrowCityWrapper = () => {
     return (
         <div>
             <div className='flex justify-between mx-40 mt-32 text-2xl font-bold mb-10'>
-                <p className='text-4xl'>You can Choose Our Favorite Cities</p>
-                <p className='border border-black px-5 py-1 rounded-full'>Explore All City</p>
+                <p className='text-4xl'>Temukan Perumahan Impian di Lokasi Pilihan</p>
+                <p className='border border-black px-5 py-1 rounded-full'>Lihat Semua Lokasi</p>
             </div>
             <Swiper
                 direction="horizontal"

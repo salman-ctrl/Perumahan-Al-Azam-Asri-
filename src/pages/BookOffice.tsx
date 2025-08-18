@@ -7,9 +7,7 @@ import axios from 'axios'
 import { bookingSchema } from '../types/validationBooking'
 
 
-
-
-const CheckBooking = () => {
+const BookOffice = () => {
 
     const { slug } = useParams<{ slug: string }>();
     const [office, setOffice] = useState<Office | null>(null);
@@ -105,10 +103,10 @@ const CheckBooking = () => {
             );
             console.log('form submited succesfully:', response.data);
 
-            navigate('success-booking', {
+            navigate('/success-booking', {
                 state: {
                     office,
-                    booking: response.data,
+                    booking: response.data.data,
                 },
             });
         } catch (error: unknown) {
@@ -142,7 +140,7 @@ const CheckBooking = () => {
                 />
             </div>
             <form
-                action="booking-finished.html"
+                onSubmit={handleSubmit}
                 className="relative flex justify-center max-w-[1130px] mx-auto gap-[30px] mb-20 z-20"
             >
                 <div className="flex flex-col shrink-0 w-[500px] h-fit rounded-[20px] border border-[#E0DEF7] p-[30px] gap-[30px] bg-white">
@@ -378,4 +376,4 @@ const CheckBooking = () => {
     )
 }
 
-export default CheckBooking
+export default BookOffice

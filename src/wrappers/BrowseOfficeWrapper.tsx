@@ -39,7 +39,9 @@ const BrowseOfficeWrapper = () => {
     return (
         <div>
             <div className='flex flex-col items-center mt-32'>
-                <p className='text-3xl text-center '>Browse Our Fresh Space. <br /> For Your Better Productivity</p>
+                <p className='text-3xl text-center'>
+                    Temukan Hunian Impian Anda. <br /> Nyaman, Aman, dan Strategis
+                </p>
                 <div className='mt-16 grid grid-cols-3 gap-[30px]'>
                     {offices.map((office) => (
                         <Link key={office.id} to={`/office/${office.slug}`}>

@@ -27,10 +27,8 @@ const BookOffice = () => {
     const [totalAmountWithUniqueCode, setTotalAmountWithUniqueCode] = useState<number>(0);
 
     const API_KEY = import.meta.env.VITE_API_KEY
-    console.log('api key:' + API_KEY)
 
     const API_BASE_URL = import.meta.env.VITE_API_URL
-    console.log('api base url :' + API_BASE_URL)
 
     useEffect(() => {
         if (!slug) {

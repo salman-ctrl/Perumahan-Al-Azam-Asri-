@@ -65,9 +65,16 @@ const Nav = () => {
               <li>
                 <Link to={`/`} onClick={() => setIsOpen(false)}>Beranda</Link>
               </li>
-              <li onClick={() => setIsOpen(false)}>Populer</li>
-              <li onClick={() => setIsOpen(false)}>Kategori</li>
-              <li onClick={() => setIsOpen(false)}>Booking Saya</li>
+              <li >
+                <Link to={'/semua-rumah'} onClick={() => setIsOpen(false)}> Rumah Tersedia </Link>
+
+              </li>
+              <li >
+                <Link to={'/check-booking'} onClick={() => setIsOpen(false)}>
+                  Booking Saya
+                </Link>
+
+              </li>
               <li>
                 <a
                   href="https://wa.me/6285267653061"

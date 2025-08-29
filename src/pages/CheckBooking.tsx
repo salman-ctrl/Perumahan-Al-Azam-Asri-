@@ -27,6 +27,8 @@ const CheckBooking = () => {
         });
     };
 
+    console.log(error)
+
     const API_KEY = import.meta.env.VITE_API_KEY
     console.log('api key:' + API_KEY)
 

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import Nav from '../components/Nav'
 import { Link, useParams } from 'react-router-dom'
 import type { City } from '../types/type'
@@ -11,11 +11,16 @@ const CityDetails = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
 
+    const API_KEY = import.meta.env.VITE_API_KEY
+    console.log('api key:' + API_KEY)
+    const API_BASE_URL = import.meta.env.VITE_API_URL
+    console.log('api base url :' + API_BASE_URL)
+
     useEffect(() => {
         axios
-            .get(`http://127.0.0.1:8000/api/city/${slug}`, {
+            .get(`${API_BASE_URL}/city/${slug}`, {
                 headers: {
-                    "X-API-KEY": "Qsqkj3kjnaso390293n923n",
+                    "X-API-KEY": API_KEY,
                 },
             })
             .then((response) => {
@@ -61,7 +66,7 @@ const CityDetails = () => {
         )
     }
 
-    const baseUrl = "http://127.0.0.1:8000/storage";
+    const baseUrl = import.meta.env.VITE_STORAGE_URL;
 
     return (
         <div className='bg-gray-100 min-h-screen overflow-x-hidden'>

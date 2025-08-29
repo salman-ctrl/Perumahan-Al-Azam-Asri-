@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import Browse from './pages/Browse'
 import CityDetails from './pages/CityDetails'
 import BookOffice from './pages/BookOffice'
@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Details from './pages/Details'
 import SuccesBooking from './pages/SuccesBooking'
 import CheckBooking from './pages/CheckBooking'
+import AllOfficesPage from './pages/AllOfficePages'
 
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
         <Route path='/office/:slug' element={<Details />} />
         <Route path='/success-booking' element={<SuccesBooking />} />
         <Route path='/check-booking' element={<CheckBooking />} />
+        <Route path='/semua-rumah' element={<AllOfficesPage />} />
       </Routes>
     </BrowserRouter>
   )

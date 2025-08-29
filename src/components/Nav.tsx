@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { PhoneIcon, Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid'
 
@@ -24,10 +24,18 @@ const Nav = () => {
             <li>
               <Link to={`/`}>Beranda</Link>
             </li>
-            <li>Populer</li>
-            <li>Kategori</li>
-            <li>Event</li>
-            <li>Booking Saya</li>
+            <li>
+              <Link to={'/semua-rumah'}>
+                Rumah Tersedia
+
+              </Link>
+            </li>
+            <li>
+              <Link to={'/check-booking'}>
+                Booking Saya
+
+              </Link>
+            </li>
           </ul>
 
           {/* Tombol Hubungi */}
@@ -35,7 +43,7 @@ const Nav = () => {
             href="https://wa.me/6285267653061"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden sm:flex items-center gap-2 border border-[#d4af37] px-5 py-2 rounded-full hover:bg-[#d4af37] hover:text-black transition-all"
+            className="hidden sm:flex items-center gap-2 border border-[#d4af37] px-5 py-2 rounded-full hover:bg-[#d4af37] hover:text-gray-300 transition-all"
           >
             <PhoneIcon className="w-5 h-5" />
             <span>Hubungi Kami</span>
@@ -43,7 +51,7 @@ const Nav = () => {
 
           {/* Hamburger menu (mobile) */}
           <button
-            className="md:hidden text-[#d4af37]"
+            className="md:hidden  text-[#d4af37]"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <XMarkIcon className="w-8 h-8" /> : <Bars3Icon className="w-8 h-8" />}
@@ -59,7 +67,6 @@ const Nav = () => {
               </li>
               <li onClick={() => setIsOpen(false)}>Populer</li>
               <li onClick={() => setIsOpen(false)}>Kategori</li>
-              <li onClick={() => setIsOpen(false)}>Event</li>
               <li onClick={() => setIsOpen(false)}>Booking Saya</li>
               <li>
                 <a

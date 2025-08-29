@@ -1,16 +1,13 @@
-import React from 'react'
-import { useLocation } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import Nav from '../components/Nav';
-import { Link } from 'react-router-dom';
 
 const SuccesBooking = () => {
 
     const location = useLocation();
     const { office, booking } = location.state;
 
-    const baseUrl = "http://127.0.0.1:8000/storage";
+    const baseUrl = import.meta.env.VITE_STORAGE_URL;
 
-    console.log
 
     return (
         <>
@@ -21,7 +18,7 @@ const SuccesBooking = () => {
                 className="relative w-full h-[240px] flex items-center shrink-0 overflow-hidden -mb-[50px]"
             >
                 <h1 className="text-center mx-auto font-extrabold text-[40px] leading-[60px] text-white mb-5 z-20">
-                    View Your Booking Details
+                    Lihat Detail Pemesanan Anda
                 </h1>
                 <div className="absolute w-full h-full bg-[linear-gradient(180deg,_rgba(0,0,0,0)_0%,#000000_91.83%)] z-10" />
                 <img

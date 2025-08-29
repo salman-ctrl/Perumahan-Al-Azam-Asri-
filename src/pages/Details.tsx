@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import Nav from '../components/Nav'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { useParams, Link } from 'react-router-dom'
@@ -12,10 +12,16 @@ const Details = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
 
+
+    const API_KEY = import.meta.env.VITE_API_KEY
+    console.log('api key:' + API_KEY)
+    const API_BASE_URL = import.meta.env.VITE_API_URL
+    console.log('api base url :' + API_BASE_URL)
+
     useEffect(() => {
-        axios.get(`http://127.0.0.1:8000/api/office/${slug}`, {
+        axios.get(`${API_BASE_URL}/office/${slug}`, {
             headers: {
-                'X-API-KEY': "Qsqkj3kjnaso390293n923n",
+                'X-API-KEY': API_KEY,
             },
         })
             .then((response) => {
@@ -43,7 +49,7 @@ const Details = () => {
         return <p>Error Loading :{error}</p>
     }
 
-    const baseUrl = "http://127.0.0.1:8000/storage";
+    const baseUrl = import.meta.env.VITE_STORAGE_URL;
 
     return (
         <div>
@@ -92,13 +98,14 @@ const Details = () => {
                                     className="w-5 h-5 sm:w-6 sm:h-6"
                                     alt="icon"
                                 />
-                                {office?.city.name}
+                                {office?.city?.name ?? '-'}
                             </div>
                         </div>
                         <div className="flex flex-col gap-[6px]">
                             <div className="flex items-center gap-1">
-                                {...Array(4).fill().map((_, i) => (
+                                {Array.from({ length: 4 }).map((_, i) => (
                                     <img
+                                        // eslint-disable-next-line react/no-array-index-key
                                         key={i}
                                         src="/assets/images/icons/Star 1.svg"
                                         className="w-5 h-5"
@@ -111,7 +118,7 @@ const Details = () => {
                                     alt="star"
                                 />
                             </div>
-                            <p className="font-semibold text-right">4.5/5 (19,384)</p>
+                            <p className="font-semibold text-right">4.5/5 ( 384)</p>
                         </div>
                     </div>
 
@@ -163,21 +170,20 @@ const Details = () => {
                                 <p className="text-sm leading-[21px]">Dekat Pusat Kota</p>
                             </div>
                         </div>
-                        {/* Lanjutkan fitur lainnya sama seperti di aslinya */}
                     </div>
 
                     <hr className="border-[#F6F5FD]" />
                     <div className="flex flex-col gap-[6px]">
                         <h2 className="font-bold">Alamat Perumahan</h2>
                         <p>{office?.name}</p>
-                        <p>{office?.city.name}</p>
+                        <p>{office?.city?.name}</p>
                     </div>
 
                     <div className="overflow-hidden w-full h-[200px] sm:h-[280px] rounded-lg">
                         <iframe
+                            title='23'
                             className="h-full w-full border-0"
-                            frameBorder={0}
-                            src={`https://www.google.com/maps/embed/v1/place?q=${office?.city.slug},&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8`}
+                            src={`https://www.google.com/maps/embed/v1/place?q=${office?.city?.slug},&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8`}
                         />
                     </div>
                 </div>
@@ -225,56 +231,25 @@ const Details = () => {
                                 <div className="flex items-center gap-4">
                                     <div className="w-[60px] h-[60px] rounded-full overflow-hidden">
                                         <img
-                                            src="/assets/images/photos/photo-1.png"
+                                            src="/assets/images/photos/sal.jpg"
                                             className="w-full h-full object-cover"
                                             alt="photo"
                                         />
                                     </div>
                                     <div className="flex flex-col gap-[2px]">
-                                        <p className="font-bold">Masayoshi</p>
-                                        <p className="text-sm leading-[21px]">Sales Manager</p>
+                                        <a href='https://wa.me/6285267653061' className="font-bold">Salman Rizky</a>
+                                        <a href='https://wa.me/6285267653061' className="text-sm leading-[21px]">Sales Manager</a>
                                     </div>
                                 </div>
                                 <div className="flex items-center gap-3">
-                                    <a href="#">
+                                    <a href="https://wa.me/6285267653061">
                                         <img
                                             src="/assets/images/icons/call-green.svg"
                                             className="w-10 h-10"
                                             alt="icon"
                                         />
                                     </a>
-                                    <a href="#">
-                                        <img
-                                            src="/assets/images/icons/chat-green.svg"
-                                            className="w-10 h-10"
-                                            alt="icon"
-                                        />
-                                    </a>
-                                </div>
-                            </div>
-                            <div className="flex items-center justify-between gap-3">
-                                <div className="flex items-center gap-4">
-                                    <div className="w-[60px] h-[60px] rounded-full overflow-hidden">
-                                        <img
-                                            src="/assets/images/photos/photo-2.png"
-                                            className="w-full h-full object-cover"
-                                            alt="photo"
-                                        />
-                                    </div>
-                                    <div className="flex flex-col gap-[2px]">
-                                        <p className="font-bold">Fuji Ovina</p>
-                                        <p className="text-sm leading-[21px]">Sales Manager</p>
-                                    </div>
-                                </div>
-                                <div className="flex items-center gap-3">
-                                    <a href="#">
-                                        <img
-                                            src="/assets/images/icons/call-green.svg"
-                                            className="w-10 h-10"
-                                            alt="icon"
-                                        />
-                                    </a>
-                                    <a href="#">
+                                    <a href="https://wa.me/6285267653061">
                                         <img
                                             src="/assets/images/icons/chat-green.svg"
                                             className="w-10 h-10"

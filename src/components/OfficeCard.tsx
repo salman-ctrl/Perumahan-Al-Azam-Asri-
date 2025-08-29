@@ -1,4 +1,3 @@
-import React from 'react'
 import { MapPinIcon, StarIcon, WifiIcon, UserIcon, ClockIcon } from '@heroicons/react/16/solid'
 import type { Office } from '../types/type'
 
@@ -21,7 +20,7 @@ const OfficeCard = ({ office }: OfficeCardProps) => {
                         <div className='flex justify-between px-3 items-center'>
                             <p className='leading-[36px]'>Rp {office.price.toLocaleString('id-ID')}</p>
                             <div className='flex items-center gap-2'>
-                                <p>Days {office.duration}</p>
+                                <p>Kamar {office.duration}</p>
                                 <ClockIcon className='h-7 w-7 text-blue-500' />
                             </div>
                         </div>

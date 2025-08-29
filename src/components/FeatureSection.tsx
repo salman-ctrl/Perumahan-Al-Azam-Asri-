@@ -1,4 +1,3 @@
-import React from 'react'
 
 const FeatureSection = () => {
     return (
@@ -92,8 +91,6 @@ const FeatureSection = () => {
                 </div>
             </div>
         </div>
-
-
     )
 }
 

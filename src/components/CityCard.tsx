@@ -2,7 +2,7 @@ import type { City } from '../types/type'
 
 const CityCard = ({ city }: CityCardProps) => {
 
-    const baseUrl = "http://127.0.0.1:8000/storage";
+    const baseUrl = import.meta.env.VITE_STORAGE_URL;
 
     return (
 

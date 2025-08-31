@@ -4,7 +4,9 @@ import type { Office } from '../types/type'
 
 const OfficeCard = ({ office }: OfficeCardProps) => {
 
-    const baseUrl = 'http://127.0.0.1:8000/storage'
+    const baseUrl = import.meta.env.VITE_STORAGE_URL;
+
+
     return (
         <div>
 

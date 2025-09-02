@@ -29,7 +29,7 @@ const SuccesBooking = () => {
             </div>
 
             <section className="flex flex-1 py-10">
-                <div className="flex flex-col w-[450px] m-auto rounded-[20px] border border-[#E0DEF4] p-[30px] gap-[30px] bg-gray-200">
+                <div className="flex    flex-col w-[450px] m-auto rounded-[20px] border border-[#E0DEF4] p-[30px] gap-[30px] bg-gray-200">
                     <div className="flex items-center gap-4">
                         <img
                             src="assets/images/icons/verify.svg"

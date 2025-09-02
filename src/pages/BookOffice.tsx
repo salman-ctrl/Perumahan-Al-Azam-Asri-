@@ -410,23 +410,11 @@ const BookOffice = () => {
                                         alt="Mandiri bank logo"
                                     />
                                 </div>
-                                <div className="flex flex-col gap-1 min-w-0 flex-1">
-                                    <div className="flex items-center gap-1">
-                                        <p className="font-semibold text-sm sm:text-base">Khairul</p>
-                                        <img
-                                            src="/assets/images/icons/verify.svg"
-                                            className="w-4 h-4 sm:w-[18px] sm:h-[18px]"
-                                            alt="verified icon"
-                                        />
-                                    </div>
-                                    <p className="text-sm sm:text-base text-gray-600">111-00-0737995-7</p>
-                                </div>
+
                             </div>
                         </div>
                     </div>
-
                     <hr className="border-[#F6F5FD]" />
-
                     {/* Submit Button */}
                     <button
                         type="submit"
